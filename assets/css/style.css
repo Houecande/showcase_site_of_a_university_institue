@@ -7,25 +7,25 @@
 
 /* ── Variables ─────────────────────────────────────────────── */
 :root {
-  --bleu-inst:     #1a3a6b;
-  --bleu-fonce:    #0f2444;
-  --bleu-clair:    #2d5a9e;
-  --or:            #c9a84c;
-  --or-clair:      #e8c87a;
+  --bleu-inst:     #003366; /* Bleu UATM */
+  --bleu-fonce:    #002147;
+  --bleu-clair:    #0056b3;
+  --or:            #ffcc00; /* Or/Jaune UATM */
+  --or-clair:      #ffdd44;
   --blanc:         #ffffff;
-  --gris-bg:       #f4f2ed;
-  --gris-clair:    #e8e5dd;
-  --gris-moyen:    #9a9280;
-  --texte:         #1c1a16;
-  --texte-doux:    #4a4640;
+  --gris-bg:       #f8f9fa;
+  --gris-clair:    #e9ecef;
+  --gris-moyen:    #adb5bd;
+  --texte:         #212529;
+  --texte-doux:    #495057;
 
-  --fonte-titre:   'EB Garamond', Georgia, serif;
+  --fonte-titre:   'Source Sans 3', 'Segoe UI', sans-serif;
   --fonte-corps:   'Source Sans 3', 'Segoe UI', sans-serif;
 
-  --ombre:         0 4px 24px rgba(15,36,68,0.13);
-  --ombre-legere:  0 2px 8px rgba(15,36,68,0.08);
+  --ombre:         0 4px 15px rgba(0,0,0,0.1);
+  --ombre-legere:  0 2px 5px rgba(0,0,0,0.05);
   --rayon:         4px;
-  --rayon-carte:   8px;
+  --rayon-carte:   6px;
 }
 
 /* ── Reset & Base ───────────────────────────────────────────── */
@@ -73,44 +73,37 @@ h1, h2, h3, h4 {
 
 /* ── En-tête principal ──────────────────────────────────────── */
 .site-header {
-  background: var(--bleu-inst);
-  color: var(--blanc);
-  padding: 20px 0 18px;
-  border-bottom: 3px solid var(--or);
+  background: var(--blanc);
+  color: var(--bleu-inst);
+  padding: 15px 0;
+  border-bottom: 4px solid var(--or);
 }
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
-.logo-cercle {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: var(--blanc);
-  border: 3px solid var(--or);
-  display: flex; align-items: center; justify-content: center;
+.logo-uatm {
+  width: 100px;
   flex-shrink: 0;
 }
-.logo-cercle span {
-  font-family: var(--fonte-titre);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--bleu-fonce);
-  text-align: center;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
+.logo-uatm img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .header-texte h1 {
-  font-size: 1.65rem;
-  color: var(--blanc);
-  letter-spacing: 0.02em;
+  font-size: 1.85rem;
+  color: var(--bleu-inst);
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 .header-texte p {
-  font-size: 0.88rem;
-  color: var(--or-clair);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-top: 3px;
+  font-size: 1rem;
+  color: var(--gris-moyen);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  margin-top: 4px;
 }
 
 /* ── Navigation ─────────────────────────────────────────────── */
@@ -130,20 +123,20 @@ h1, h2, h3, h4 {
 }
 .nav-principale ul li a {
   display: block;
-  padding: 14px 22px;
-  font-size: 0.9rem;
+  padding: 16px 24px;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--gris-clair);
+  color: rgba(255,255,255,0.8);
   border-bottom: 3px solid transparent;
-  transition: color .2s, border-color .2s, background .2s;
+  transition: all .2s ease;
 }
 .nav-principale ul li a:hover,
 .nav-principale ul li a.actif {
-  color: var(--or-clair);
+  color: var(--or);
   border-bottom-color: var(--or);
-  background: rgba(201,168,76,0.08);
+  background: rgba(255,255,255,0.05);
 }
 
 /* ── Conteneur global ───────────────────────────────────────── */
@@ -186,9 +179,9 @@ h1, h2, h3, h4 {
 
 /* ── Héro (Accueil) ─────────────────────────────────────────── */
 #accueil .hero {
-  background: linear-gradient(135deg, var(--bleu-fonce) 0%, var(--bleu-inst) 60%, var(--bleu-clair) 100%);
+  background: linear-gradient(135deg, var(--bleu-fonce) 0%, var(--bleu-inst) 100%);
   color: var(--blanc);
-  padding: 90px 0 80px;
+  padding: 100px 0 90px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -197,73 +190,66 @@ h1, h2, h3, h4 {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    0deg, transparent, transparent 39px,
-    rgba(255,255,255,0.03) 39px, rgba(255,255,255,0.03) 40px
-  );
+  background: url('../../assets/img/cropped-logos-vers-corrige-UATM-1536x1350.png') no-repeat center;
+  background-size: 60%;
+  opacity: 0.04;
   pointer-events: none;
 }
 #accueil .hero h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: var(--blanc);
-  max-width: 780px;
-  margin: 0 auto 18px;
-  line-height: 1.2;
+  max-width: 850px;
+  margin: 0 auto 24px;
+  line-height: 1.15;
   position: relative;
 }
 #accueil .hero h2 em {
-  color: var(--or-clair);
-  font-style: italic;
+  color: var(--or);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,204,0,0.4);
 }
 #accueil .hero p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.82);
-  max-width: 600px;
-  margin: 0 auto 32px;
-  position: relative;
-}
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 700px;
+  margin: 0 auto 40px;
   position: relative;
 }
 
 /* ── Boutons ────────────────────────────────────────────────── */
 .btn {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 14px 32px;
   font-family: var(--fonte-corps);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   border-radius: var(--rayon);
   cursor: pointer;
-  transition: background .2s, color .2s, transform .15s, box-shadow .2s;
+  transition: all .25s ease;
   border: 2px solid transparent;
 }
-.btn:hover { transform: translateY(-2px); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
 .btn-primaire {
   background: var(--or);
-  color: var(--bleu-fonce);
+  color: var(--bleu-inst);
   border-color: var(--or);
 }
 .btn-primaire:hover {
-  background: var(--or-clair);
-  color: var(--bleu-fonce);
-  box-shadow: 0 6px 20px rgba(201,168,76,0.35);
+  background: var(--blanc);
+  color: var(--bleu-inst);
+  border-color: var(--blanc);
 }
 .btn-secondaire {
   background: transparent;
   color: var(--blanc);
-  border-color: rgba(255,255,255,0.6);
+  border-color: var(--blanc);
 }
 .btn-secondaire:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: var(--blanc);
-  color: var(--blanc);
+  background: var(--blanc);
+  color: var(--bleu-inst);
 }
 .btn-bleu {
   background: var(--bleu-inst);
@@ -271,8 +257,9 @@ h1, h2, h3, h4 {
   border-color: var(--bleu-inst);
 }
 .btn-bleu:hover {
-  background: var(--bleu-fonce);
-  color: var(--or-clair);
+  background: var(--or);
+  color: var(--bleu-inst);
+  border-color: var(--or);
 }
 
 /* ── Chiffres clés ──────────────────────────────────────────── */
@@ -604,21 +591,21 @@ h1, h2, h3, h4 {
   font-size: 0.88rem;
   transition: color .2s;
 }
-.footer-col ul li a:hover { color: var(--or-clair); }
+.footer-col ul li a:hover { color: var(--or); }
 .footer-bas {
-  background: rgba(0,0,0,0.25);
-  padding: 16px 0;
-  margin-top: 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.3);
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 .footer-bas .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
 /* ── Séparateur ornemental ──────────────────────────────────── */
@@ -633,14 +620,17 @@ h1, h2, h3, h4 {
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .footer-grille { grid-template-columns: 1fr 1fr; }
-  #accueil .hero h2 { font-size: 2rem; }
+  #accueil .hero h2 { font-size: 2.2rem; }
 }
 @media (max-width: 600px) {
-  .header-texte h1 { font-size: 1.2rem; }
-  .logo-cercle { width: 54px; height: 54px; }
+  .header-inner { flex-direction: column; text-align: center; gap: 15px; }
+  .logo-uatm { width: 80px; }
+  .header-texte h1 { font-size: 1.5rem; }
+  .header-texte p { font-size: 0.9rem; }
   .footer-grille { grid-template-columns: 1fr; }
-  .nav-principale ul li a { padding: 12px 14px; font-size: 0.78rem; }
+  .nav-principale ul li a { padding: 12px 15px; font-size: 0.8rem; }
   .section { padding: 48px 0; }
-  #accueil .hero { padding: 56px 0 48px; }
-  #accueil .hero h2 { font-size: 1.6rem; }
+  #accueil .hero { padding: 60px 0 50px; }
+  #accueil .hero h2 { font-size: 1.8rem; }
+  #accueil .hero p { font-size: 1.05rem; }
 }
