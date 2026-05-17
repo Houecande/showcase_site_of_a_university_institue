@@ -1,11 +1,7 @@
-/* ============================================================
-   UATM/GASA — UFR des Sciences et Techniques
-   Style académique/institutionnel
-   ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
-/* ── Variables ─────────────────────────────────────────────── */
+/* Variables */
 :root {
   --bleu-inst:     #003366; /* Bleu UATM */
   --bleu-fonce:    #002147;
@@ -28,7 +24,7 @@
   --rayon-carte:   6px;
 }
 
-/* ── Reset & Base ───────────────────────────────────────────── */
+/* Reset & Base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -41,13 +37,14 @@ body {
   overflow-x: hidden; /* Prévient les débordements dus aux animations */
 }
 
-/* ── Animations au défilement (Scroll Reveal) ───────────────── */
+/*  Animations au défilement (Scroll Reveal) */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
+.no-js .reveal,
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
@@ -71,7 +68,7 @@ h1, h2, h3, h4 {
   line-height: 1.25;
 }
 
-/* ── Barre supérieure ───────────────────────────────────────── */
+/* Barre supérieure  */
 .topbar {
   background: var(--bleu-fonce);
   color: var(--gris-clair);
@@ -90,7 +87,7 @@ h1, h2, h3, h4 {
 .topbar a { color: var(--gris-clair); }
 .topbar a:hover { color: var(--or-clair); }
 
-/* ── En-tête principal ──────────────────────────────────────── */
+/* En-tête principal */
 .site-header {
   background: var(--blanc);
   color: var(--bleu-inst);
@@ -125,7 +122,7 @@ h1, h2, h3, h4 {
   margin-top: 4px;
 }
 
-/* ── Navigation ─────────────────────────────────────────────── */
+/* Navigation  */
 .nav-principale {
   background: var(--bleu-fonce);
   position: sticky;
@@ -158,14 +155,14 @@ h1, h2, h3, h4 {
   background: rgba(255,255,255,0.05);
 }
 
-/* ── Conteneur global ───────────────────────────────────────── */
+/* Conteneur global */
 .container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ── Sections ───────────────────────────────────────────────── */
+/* Sections */
 .section { padding: 72px 0; }
 .section-claire { background: var(--blanc); }
 .section-gris   { background: var(--gris-bg); }
@@ -196,7 +193,7 @@ h1, h2, h3, h4 {
   font-size: 1.05rem;
 }
 
-/* ── Héro (Accueil) ─────────────────────────────────────────── */
+/*  Héro (Accueil) */
 #accueil .hero {
   background: linear-gradient(135deg, var(--bleu-fonce) 0%, var(--bleu-inst) 100%);
   color: var(--blanc);
@@ -209,7 +206,7 @@ h1, h2, h3, h4 {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../../assets/img/cropped-logos-vers-corrige-UATM-1536x1350.png') no-repeat center;
+  background: url('../img/cropped-logos-vers-corrige-UATM-1536x1350.png') no-repeat center;
   background-size: 60%;
   opacity: 0.04;
   pointer-events: none;
@@ -236,7 +233,7 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-/* ── Boutons ────────────────────────────────────────────────── */
+/* Boutons  */
 .btn {
   display: inline-block;
   padding: 14px 32px;
@@ -281,7 +278,7 @@ h1, h2, h3, h4 {
   border-color: var(--or);
 }
 
-/* ── Chiffres clés ──────────────────────────────────────────── */
+/*  Chiffres clés  */
 .chiffres-cles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -327,7 +324,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.08em;
 }
 
-/* ── Grille de cartes ───────────────────────────────────────── */
+/*  Grille de cartes */
 .grille-cartes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -380,12 +377,12 @@ h1, h2, h3, h4 {
 .carte-corps ul li:last-child { border-bottom: none; }
 .carte-corps ul li::before {
   content: '›';
-  color: var(--or);
+  color: var(--bleu-clair); /* Correction contraste : Or sur Blanc -> Bleu sur Blanc */
   font-weight: 700;
   margin-right: 8px;
 }
 
-/* ── Tableau des admissions ─────────────────────────────────── */
+/*  Tableau des admissions */
 .tableau-adm {
   width: 100%;
   border-collapse: collapse;
@@ -426,7 +423,7 @@ h1, h2, h3, h4 {
 .badge-ferme   { background: #f8d7da; color: #721c24; }
 .badge-bientot { background: #fff3cd; color: #856404; }
 
-/* ── Étapes admission ───────────────────────────────────────── */
+/* Étapes admission  */
 .etapes {
   display: flex;
   flex-direction: column;
@@ -467,7 +464,7 @@ h1, h2, h3, h4 {
 .etape-contenu h4 { font-size: 1.05rem; margin-bottom: 4px; }
 .etape-contenu p  { font-size: 0.9rem; color: var(--texte-doux); }
 
-/* ── Labo / Recherche ───────────────────────────────────────── */
+/* Labo / Recherche */
 .labo-carte {
   background: var(--blanc);
   border-left: 4px solid var(--or);
@@ -486,7 +483,7 @@ h1, h2, h3, h4 {
 }
 .labo-carte p { font-size: 0.93rem; color: var(--texte-doux); }
 
-/* ── Hébergement ────────────────────────────────────────────── */
+/*  Hébergement */
 .residence-grille {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -527,7 +524,7 @@ h1, h2, h3, h4 {
 .infos-liste li { padding: 4px 0; }
 .infos-liste li::before { content: '✓ '; color: var(--bleu-clair); font-weight: 700; }
 
-/* ── Actualités ─────────────────────────────────────────────── */
+/* Actualités */
 .actu-grille {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -595,7 +592,7 @@ h1, h2, h3, h4 {
 }
 .actu-corps .lire-plus:hover { color: var(--or); }
 
-/* ── Pied de page ───────────────────────────────────────────── */
+/* Pied de page  */
 .site-footer {
   background: var(--bleu-fonce);
   color: rgba(255,255,255,0.8);
@@ -644,7 +641,7 @@ h1, h2, h3, h4 {
   gap: 12px;
 }
 
-/* ── Séparateur ornemental ──────────────────────────────────── */
+/* Séparateur ornemental  */
 .ornement {
   text-align: center;
   margin: 0 auto 40px;
@@ -653,7 +650,131 @@ h1, h2, h3, h4 {
   letter-spacing: 12px;
 }
 
-/* ── Responsive ─────────────────────────────────────────────── */
+/* Nouvelles classes pour remplacer les styles en ligne */
+.flag-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.tableau-wrapper {
+  overflow-x: auto;
+  margin-bottom: 48px;
+}
+
+.admissions-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.section-h3 {
+  font-size: 1.25rem;
+  margin-bottom: 28px;
+  color: var(--bleu-inst);
+}
+
+.section-h3-alt {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--bleu-inst);
+}
+
+.section-h3-small {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--bleu-inst);
+}
+
+.dossier-box {
+  background: var(--gris-bg);
+  border-radius: var(--rayon-carte);
+  padding: 28px 24px;
+  border: 1px solid var(--gris-clair);
+}
+
+.dossier-guide-titre {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bleu-inst);
+}
+
+.dossier-liste {
+  font-size: 0.9rem;
+  color: var(--texte-doux);
+  list-style: none;
+  padding: 0;
+}
+
+.dossier-item {
+  margin-bottom: 8px;
+}
+
+.recherche-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.axes-box {
+  background: var(--blanc);
+  border-radius: var(--rayon-carte);
+  padding: 28px;
+  border: 1px solid var(--gris-clair);
+  box-shadow: var(--ombre-legere);
+}
+
+.axes-grille {
+  display: grid;
+  gap: 16px;
+}
+
+.axe-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gris-clair);
+}
+
+.axe-item-last {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.axe-icone {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.axe-h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.axe-p {
+  font-size: 0.88rem;
+  color: var(--texte-doux);
+}
+
+.residence-img-bleu-clair {
+  background: var(--bleu-clair);
+}
+
+.residence-img-bleu-fonce {
+  background: var(--bleu-fonce);
+}
+
+.footer-contact-flag {
+  margin-top: 12px;
+}
+
+/*  Responsive */
 @media (max-width: 900px) {
   .footer-grille { grid-template-columns: 1fr 1fr; }
   #accueil .hero h2 { font-size: 2.2rem; }

@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UATM/GASA — Université Africaine de Technologie et de Management</title>
+  <meta name="description" content="Site officiel de l'UATM/GASA Formation - Université Africaine de Technologie et de Management au Bénin. Excellence académique, recherche et innovation." />
+  <title>UATM/GASA Formation — Université Africaine de Technologie et de Management</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="no-js">
+  <script>document.body.classList.remove('no-js');</script>
 
   <!-- BARRE SUPÉRIEURE -->
   <div class="topbar reveal">
     <div class="container">
-      <span>📍 Bénin &nbsp;|&nbsp; Université Africaine de Technologie et de Management</span>
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 3 2" class="flag-icon" role="img" aria-label="Drapeau du Bénin"><title>Drapeau du Bénin</title><rect width="3" height="2" fill="#fcd116"/><rect width="3" height="1" y="1" fill="#e8112d"/><rect width="1.2" height="2" fill="#008751"/></svg>Bénin &nbsp;|&nbsp; Université Africaine de Technologie et de Management</span>
       <span>
         <a href="mailto:contact@uatm-gasa.edu.bj">contact@uatm-gasa.edu.bj</a>
         &nbsp;|&nbsp;
-        <a href="tel:+22900000000">+229 00 00 00 00</a>
+        <a href="tel:+2290100000000">+229 01 00 00 00 00</a>
       </span>
     </div>
   </div>
@@ -41,7 +43,6 @@
       <ul>
         <li><a href="#accueil" class="actif">Accueil</a></li>
         <li><a href="#facultes">Facultés</a></li>
-        <li><a href="#offres">Offres</a></li>
         <li><a href="#admissions">Admissions</a></li>
         <li><a href="#recherche">Recherche</a></li>
         <li><a href="#hebergement">Hébergement</a></li>
@@ -57,15 +58,13 @@
         <h2>Forger <em>l'excellence</em><br>au cœur de l'Afrique</h2>
         <p>L'UATM forme les ingénieurs, chercheurs et leaders de demain à travers des programmes rigoureux, un corps enseignant de qualité et un environnement propice à l'innovation.</p>
         <div class="hero-actions">
-          <a href="#admissions" class="btn btn-primaire">Candidater maintenant</a>
           <a href="#facultes"   class="btn btn-secondaire">Découvrir nos formations</a>
         </div>
         <div class="chiffres-cles">
-          <div class="chiffre-carte"><span class="nombre">+4 500</span><span class="label">Étudiants</span></div>
-          <div class="chiffre-carte"><span class="nombre">18</span><span class="label">Départements</span></div>
-          <div class="chiffre-carte"><span class="nombre">120+</span><span class="label">Enseignants-chercheurs</span></div>
-          <div class="chiffre-carte"><span class="nombre">30 ans</span><span class="label">D'histoire</span></div>
-          <div class="chiffre-carte"><span class="nombre">15</span><span class="label">Laboratoires</span></div>
+          <div class="chiffre-carte"><span class="nombre" data-target="4500">0</span><span class="label">Étudiants</span></div>
+          <div class="chiffre-carte"><span class="nombre" data-target="18">0</span><span class="label">Départements</span></div>
+          <div class="chiffre-carte"><span class="nombre" data-target="120">0</span><span class="label">Enseignants-chercheurs</span></div>
+          <div class="chiffre-carte"><span class="nombre" data-target="15">0</span><span class="label">Laboratoires</span></div>
         </div>
       </div>
     </div>
@@ -102,97 +101,55 @@
         <p>L'UATM propose un large éventail de formations du niveau Licence au Doctorat dans plusieurs domaines stratégiques.</p>
       </div>
       <div class="grille-cartes">
+        <!-- Informatique & Réseaux -->
         <div class="carte reveal">
           <div class="carte-entete"><div class="icone">💻</div><h3>Informatique &amp; Réseaux</h3></div>
           <div class="carte-corps">
             <p>Formation aux fondamentaux de l'informatique, des réseaux, des systèmes d'information et du développement logiciel.</p>
             <ul>
-              <li>L3 Systèmes et Informatique (SIL)</li>
-              <li>L3 Réseaux et Télécommunications</li>
-              <li>M1/M2 Génie Logiciel</li>
-              <li>M1/M2 Sécurité Informatique</li>
+              <li>L3 Système Informatique et Logiciel (SIL)</li>
+              <li>L3 Réseaux Informatique et Télécommunication</li>
+              <li>M1/M2 Génie Logiciel / Sécurité Informatique</li>
+              <li>LP Système Industriel</li>
             </ul>
           </div>
         </div>
+        <!-- Génie Électrique -->
         <div class="carte reveal">
-          <div class="carte-entete"><div class="icone">⚡</div><h3>Génie Électrique &amp; Électronique</h3></div>
+          <div class="carte-entete"><div class="icone">⚡</div><h3>Génie Électrique &amp; Industriel</h3></div>
           <div class="carte-corps">
-            <p>Maîtrise des systèmes électriques, de l'électronique de puissance et des énergies renouvelables pour un avenir durable.</p>
+            <p>Maîtrise des systèmes électriques, de l'électronique de puissance et des énergies renouvelables.</p>
             <ul>
-              <li>L3 Électrotechnique</li>
-              <li>L3 Électronique Embarquée</li>
+              <li>L3 Électrotechnique / Électronique</li>
               <li>M1/M2 Énergie Solaire &amp; Éolienne</li>
               <li>M2 Automatique et Robotique</li>
             </ul>
           </div>
         </div>
+        <!-- Sciences & Biotechnologies -->
         <div class="carte reveal">
-          <div class="carte-entete"><div class="icone">🧪</div><h3>Sciences Fondamentales</h3></div>
+          <div class="carte-entete"><div class="icone">🧪</div><h3>Sciences &amp; Biotechnologies</h3></div>
           <div class="carte-corps">
-            <p>Enseignement approfondi des mathématiques, de la physique et de la chimie comme socles indispensables à toute ingénierie de haut niveau.</p>
+            <p>Enseignement approfondi des sciences fondamentales et appliquées au vivant et à l'agriculture.</p>
             <ul>
-              <li>L3 Mathématiques Appliquées</li>
-              <li>L3 Physique–Chimie</li>
+              <li>LP Agronomie / Biotechnologie</li>
+              <li>L3 Mathématiques Appliquées / Physique</li>
               <li>M1/M2 Modélisation &amp; Simulation</li>
               <li>Doctorat en Sciences</li>
             </ul>
           </div>
         </div>
+        <!-- Management, Droit & Logistique -->
         <div class="carte reveal">
-          <div class="carte-entete"><div class="icone">📊</div><h3>Management des Technologies</h3></div>
+          <div class="carte-entete"><div class="icone">📊</div><h3>Management, Droit &amp; Logistique</h3></div>
           <div class="carte-corps">
-            <p>Alliance de la gestion de projet, de l'entrepreneuriat et des technologies numériques pour former des managers innovants.</p>
+            <p>Alliance de la gestion, du droit et de la logistique pour former des leaders polyvalents.</p>
             <ul>
-              <li>L3 Gestion des Systèmes d'Information</li>
-              <li>M1 Management de Projet IT</li>
-              <li>M2 Transformation Numérique</li>
-              <li>MBA Technologie &amp; Innovation</li>
+              <li>LP Transport et Logistique et maritime</li>
+              <li>LP Sciences Juridiques / Banque Finance Assurance</li>
+              <li>LP Management RH / Communication &amp; Commerce</li>
+              <li>LP Finance Comptabilité et Audit / Entrepreneuriat</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFRES DE FORMATION -->
-  <section id="offres" class="section section-claire">
-    <div class="container">
-      <div class="section-titre reveal">
-        <h2>Offres de formation de GASA FORMATION</h2>
-        <p>Découvrez nos programmes de Licence et Licences Professionnelles adaptés aux défis du monde professionnel.</p>
-      </div>
-      <div class="grille-cartes">
-        <!-- Licence -->
-        <div class="carte reveal">
-          <div class="carte-entete"><div class="icone">📜</div><h3>Licence</h3></div>
-          <div class="carte-corps">
-            <ul>
-              <li>Licence Transport et Logistique et maritime</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Licence Professionnelle -->
-        <div class="carte reveal" style="grid-column: span 2;">
-          <div class="carte-entete"><div class="icone">💼</div><h3>Licence professionnelle</h3></div>
-          <div class="carte-corps">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 40px;">
-              <ul>
-                <li>Licence professionnelle en Sciences Juridiques</li>
-                <li>Licence professionnelle en Agronomie</li>
-                <li>Licence professionnelle en Management des Ressources Humaines</li>
-                <li>Licence professionnelle en Management Communication et Commerce</li>
-                <li>Licence professionnelle en Finance Comptabilité et Audit</li>
-                <li>Licence professionnelle en Réseaux Informatique et Télécommunication</li>
-              </ul>
-              <ul>
-                <li>Licence professionnelle en Communication et Relations Internationales</li>
-                <li>Licence professionnelle en Banque Finance Assurance</li>
-                <li>Licence professionnelle en Biotechnologie</li>
-                <li>Licence professionnelle en Entrepreneuriat et Gestion des Projets</li>
-                <li>Licence professionnelle en Système Informatique et Logiciel</li>
-                <li>Licence professionnelle en Système Industriel</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -206,7 +163,7 @@
         <h2>Admissions</h2>
         <p>L'UATM accueille chaque année de nouveaux étudiants sélectionnés sur dossier et/ou concours. Consultez les conditions d'accès à chaque niveau.</p>
       </div>
-      <div style="overflow-x:auto; margin-bottom:48px;" class="reveal">
+      <div class="tableau-wrapper reveal">
         <table class="tableau-adm">
           <thead>
             <tr>
@@ -223,9 +180,9 @@
           </tbody>
         </table>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; flex-wrap:wrap;">
+      <div class="admissions-grille">
         <div class="reveal">
-          <h3 style="font-size:1.25rem; margin-bottom:28px; color:var(--bleu-inst);">Étapes de candidature</h3>
+          <h3 class="section-h3">Étapes de candidature</h3>
           <div class="etapes">
             <div class="etape"><div class="etape-num">1</div><div class="etape-contenu"><h4>Vérifier les conditions</h4><p>Consultez les prérequis de la formation visée dans le tableau ci-dessus ou contactez le service des admissions.</p></div></div>
             <div class="etape"><div class="etape-num">2</div><div class="etape-contenu"><h4>Constituer votre dossier</h4><p>Rassemblez : relevés de notes, copies diplômes, pièce d'identité, lettre de motivation et 2 photos d'identité.</p></div></div>
@@ -235,10 +192,17 @@
           </div>
         </div>
         <div class="reveal">
-          <h3 style="font-size:1.25rem; margin-bottom:20px; color:var(--bleu-inst);">Dossier d'inscription</h3>
-          <div style="background:var(--gris-bg); border-radius:var(--rayon-carte); padding:28px 24px; border:1px solid var(--gris-clair);">
-            <p style="margin-bottom:20px; font-size:0.95rem; color:var(--texte-doux);">Téléchargez le guide complet et le formulaire pour l'année académique 2025–2026.</p>
-            <a href="assets/docs/dossier_inscription_uatm_2025.pdf" class="btn btn-bleu" style="display:inline-block;" download>Télécharger le dossier (PDF)</a>
+          <h3 class="section-h3-alt">Dossier d'inscription</h3>
+          <div class="dossier-box">
+            <p class="dossier-guide-titre">Guide complet du dossier d'inscription 2026–2027 :</p>
+            <ul class="dossier-liste">
+              <li class="dossier-item">✓ Formulaire d'inscription rempli</li>
+              <li class="dossier-item">✓ Relevés de notes originaux</li>
+              <li class="dossier-item">✓ Copies certifiées des diplômes</li>
+              <li class="dossier-item">✓ Pièce d'identité valide</li>
+              <li class="dossier-item">✓ Lettre de motivation</li>
+              <li>✓ 2 photos d'identité</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -252,20 +216,20 @@
         <h2>Recherche &amp; Innovation</h2>
         <p>L'UATM se positionne comme un pôle de recherche appliquée au service du développement durable, des technologies émergentes et des défis africains contemporains.</p>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:48px;">
+      <div class="recherche-grille">
         <div class="reveal">
-          <h3 style="font-size:1.2rem; margin-bottom:20px; color:var(--bleu-inst);">Laboratoires actifs</h3>
+          <h3 class="section-h3-small">Laboratoires actifs</h3>
           <div class="labo-carte"><h3>Laboratoire d'Informatique et Réseaux (LIR)</h3><p>Recherches en cybersécurité, intelligence artificielle, réseaux de capteurs sans fil et systèmes distribués appliqués au contexte africain.</p></div>
           <div class="labo-carte"><h3>Laboratoire d'Énergies Renouvelables (LER)</h3><p>Études sur le solaire photovoltaïque, la biomasse, le stockage d'énergie et l'électrification rurale des zones enclavées.</p></div>
           <div class="labo-carte"><h3>Centre de Recherche en Mathématiques Appliquées (CRMA)</h3><p>Modélisation mathématique, équations différentielles, statistiques appliquées et simulation numérique pour l'ingénierie.</p></div>
         </div>
         <div class="reveal">
-          <h3 style="font-size:1.2rem; margin-bottom:20px; color:var(--bleu-inst);">Axes stratégiques 2024–2029</h3>
-          <div style="background:var(--blanc); border-radius:var(--rayon-carte); padding:28px; border:1px solid var(--gris-clair); box-shadow:var(--ombre-legere);">
-            <div style="display:grid; gap:16px;">
-              <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:16px; border-bottom:1px solid var(--gris-clair);"><div style="font-size:1.8rem; flex-shrink:0;">🤖</div><div><h4 style="font-size:1rem; margin-bottom:4px;">Intelligence Artificielle &amp; Big Data</h4><p style="font-size:0.88rem; color:var(--texte-doux);">Applications en santé, agriculture intelligente et gouvernance numérique en Afrique subsaharienne.</p></div></div>
-              <div style="display:flex; gap:16px; align-items:flex-start; padding-bottom:16px; border-bottom:1px solid var(--gris-clair);"><div style="font-size:1.8rem; flex-shrink:0;">☀️</div><div><h4 style="font-size:1rem; margin-bottom:4px;">Transition énergétique</h4><p style="font-size:0.88rem; color:var(--texte-doux);">Solutions d'accès à l'énergie propre pour les ménages ruraux et les entreprises locales.</p></div></div>
-              <div style="display:flex; gap:16px; align-items:flex-start;"><div style="font-size:1.8rem; flex-shrink:0;">🌱</div><div><h4 style="font-size:1rem; margin-bottom:4px;">Agriculture numérique</h4><p style="font-size:0.88rem; color:var(--texte-doux);">IoT agricole, drones de surveillance, systèmes d'irrigation intelligents et prévision météorologique locale.</p></div></div>
+          <h3 class="section-h3-small">Axes stratégiques 2024–2029</h3>
+          <div class="axes-box">
+            <div class="axes-grille">
+              <div class="axe-item"><div class="axe-icone" role="img" aria-label="Robot">🤖</div><div><h4 class="axe-h4">Intelligence Artificielle &amp; Big Data</h4><p class="axe-p">Applications en santé, agriculture intelligente et gouvernance numérique en Afrique subsaharienne.</p></div></div>
+              <div class="axe-item"><div class="axe-icone" role="img" aria-label="Soleil">☀️</div><div><h4 class="axe-h4">Transition énergétique</h4><p class="axe-p">Solutions d'accès à l'énergie propre pour les ménages ruraux et les entreprises locales.</p></div></div>
+              <div class="axe-item-last"><div class="axe-icone" role="img" aria-label="Plante">🌱</div><div><h4 class="axe-h4">Agriculture numérique</h4><p class="axe-p">IoT agricole, drones de surveillance, systèmes d'irrigation intelligents et prévision météorologique locale.</p></div></div>
             </div>
           </div>
         </div>
@@ -282,7 +246,7 @@
       </div>
       <div class="residence-grille">
         <div class="residence-carte reveal">
-          <div class="residence-img">🏠</div>
+          <div class="residence-img" role="img" aria-label="Maison">🏠</div>
           <div class="residence-info">
             <h3>Résidence A — « Savane »</h3>
             <div class="prix">12 000 FCFA <span>/ mois</span></div>
@@ -292,7 +256,7 @@
           </div>
         </div>
         <div class="residence-carte reveal">
-          <div class="residence-img" style="background:var(--bleu-clair);">🏢</div>
+          <div class="residence-img residence-img-bleu-clair" role="img" aria-label="Immeuble">🏢</div>
           <div class="residence-info">
             <h3>Résidence B — « Harmattan »</h3>
             <div class="prix">18 000 FCFA <span>/ mois</span></div>
@@ -302,7 +266,7 @@
           </div>
         </div>
         <div class="residence-carte reveal">
-          <div class="residence-img" style="background:var(--bleu-fonce);">🏛️</div>
+          <div class="residence-img residence-img-bleu-fonce" role="img" aria-label="Bâtiment classique">🏛️</div>
           <div class="residence-info">
             <h3>Résidence C — « Baobab » (Premium)</h3>
             <div class="prix">30 000 FCFA <span>/ mois</span></div>
@@ -323,9 +287,9 @@
         <p>Suivez la vie de l'UATM : événements académiques, résultats de recherche, appels à candidatures et vie étudiante.</p>
       </div>
       <div class="actu-grille">
-        <article class="actu-carte reveal"><div class="actu-date-bandeau"><div class="jour">12</div><div class="mois-annee">Mai 2025</div></div><div class="actu-corps"><div class="categorie">Événement académique</div><h3>Journée Portes Ouvertes 2025</h3><p>L'UATM ouvre ses portes aux futurs étudiants et à leurs familles. Visite des laboratoires, rencontre avec les enseignants et présentation des filières.</p></div></article>
-        <article class="actu-carte reveal"><div class="actu-date-bandeau"><div class="jour">28</div><div class="mois-annee">Avr 2025</div></div><div class="actu-corps"><div class="categorie">Recherche</div><h3>Publication scientifique internationale</h3><p>Le LIR publie une étude sur l'optimisation des réseaux de capteurs sans fil en milieu tropical, contribuant à l'avancement des technologies IoT.</p></div></article>
-        <article class="actu-carte reveal"><div class="actu-date-bandeau"><div class="jour">15</div><div class="mois-annee">Avr 2025</div></div><div class="actu-corps"><div class="categorie">Admissions</div><h3>Concours d'entrée en L1 — Résultats publiés</h3><p>Les résultats du concours d'entrée en première année de Licence sont disponibles. Félicitations aux nouveaux étudiants admis.</p></div></article>
+        <article class="actu-carte reveal"><div class="actu-date-bandeau"><div class="jour">12</div><div class="mois-annee">Mai 2026</div></div><div class="actu-corps"><div class="categorie">Événement académique</div><h3>Journée Portes Ouvertes 2026</h3><p>L'UATM ouvre ses portes aux futurs étudiants et à leurs familles. Visite des laboratoires, rencontre avec les enseignants et présentation des filières.</p></div></article>
+        <article class="actu-carte reveal"><div class="actu-date-bandeau"><div class="jour">28</div><div class="mois-annee">Avr 2026</div></div><div class="actu-corps"><div class="categorie">Recherche</div><h3>Publication scientifique internationale</h3><p>Le LIR publie une étude sur l'optimisation des réseaux de capteurs sans fil en milieu tropical, contribuant à l'avancement des technologies IoT.</p></div></article>
+        <article class="actu-carte reveal"><div class="actu-date-bandeau"><div class="jour">15</div><div class="mois-annee">Avr 2026</div></div><div class="actu-corps"><div class="categorie">Admissions</div><h3>Concours d'entrée en L1 — Résultats publiés</h3><p>Les résultats du concours d'entrée en première année de Licence sont disponibles. Félicitations aux nouveaux étudiants admis.</p></div></article>
       </div>
     </div>
   </section>
@@ -337,12 +301,12 @@
         <div class="footer-col">
           <h4>UATM / GASA</h4>
           <p>Université Africaine de Technologie et de Management. Engagée dans la formation d'excellence et la recherche scientifique au service de l'Afrique.</p>
-          <p style="margin-top:12px;">📍 Bénin, Afrique de l'Ouest</p>
+          <p class="footer-contact-flag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 3 2" class="flag-icon" role="img" aria-label="Drapeau du Bénin"><title>Drapeau du Bénin</title><rect width="3" height="2" fill="#fcd116"/><rect width="3" height="1" y="1" fill="#e8112d"/><rect width="1.2" height="2" fill="#008751"/></svg>Bénin, Afrique de l'Ouest</p>
         </div>
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#accueil">Accueil</a></li><li><a href="#facultes">Facultés</a></li><li><a href="#offres">Offres</a></li><li><a href="#admissions">Admissions</a></li><li><a href="#recherche">Recherche</a></li><li><a href="#hebergement">Hébergement</a></li><li><a href="#actualites">Actualités</a></li>
+            <li><a href="#accueil">Accueil</a></li><li><a href="#facultes">Facultés</a></li><li><a href="#admissions">Admissions</a></li><li><a href="#recherche">Recherche</a></li><li><a href="#hebergement">Hébergement</a></li><li><a href="#actualites">Actualités</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -355,7 +319,7 @@
     </div>
     <div class="footer-bas">
       <div class="container">
-        <span>© 2025 UATM/GASA — Tous droits réservés.</span>
+        <span>© 2026 UATM/GASA Formation — Tous droits réservés.</span>
         <span>Université Africaine de Technologie et de Management</span>
       </div>
     </div>
@@ -383,6 +347,35 @@
     };
     const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* Counter Animation */
+    const counters = document.querySelectorAll('.nombre');
+    const speed = 200;
+
+    const animateCounter = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      let count = +counter.innerText.replace('+', '').replace(/\s/g, '');
+      const increment = target / speed;
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = "+" + Math.ceil(count).toLocaleString();
+        setTimeout(() => animateCounter(counter), 1);
+      } else {
+        counter.innerText = "+" + target.toLocaleString();
+      }
+    };
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 1 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
   </script>
 
 </body>
