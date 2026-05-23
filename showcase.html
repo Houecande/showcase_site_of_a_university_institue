@@ -40,7 +40,12 @@
   <!-- NAVIGATION -->
   <nav class="nav-principale reveal" aria-label="Navigation principale">
     <div class="container">
-      <ul>
+      <button class="menu-mobile-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menu principal">
+        <span class="barre"></span>
+        <span class="barre"></span>
+        <span class="barre"></span>
+      </button>
+      <ul id="nav-list">
         <li><a href="#accueil" class="actif">Accueil</a></li>
         <li><a href="#facultes">Facultés</a></li>
         <li><a href="#admissions">Admissions</a></li>
@@ -329,6 +334,25 @@
     /* Navigation Active Link */
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-principale a');
+    const menuToggle = document.querySelector('.menu-mobile-toggle');
+    const navList = document.querySelector('#nav-list');
+
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      navList.classList.toggle('ouvert');
+      menuToggle.classList.toggle('actif');
+    });
+
+    // Fermer le menu au clic sur un lien
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        navList.classList.remove('ouvert');
+        menuToggle.classList.remove('actif');
+      });
+    });
+
     function updateNav() {
       let current = '';
       sections.forEach(sec => { if (sec.getBoundingClientRect().top <= 100) current = sec.id; });

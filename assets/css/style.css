@@ -774,19 +774,149 @@ h1, h2, h3, h4 {
 }
 
 /*  Responsive */
-@media (max-width: 900px) {
-  .footer-grille { grid-template-columns: 1fr 1fr; }
-  #accueil .hero h2 { font-size: 2.2rem; }
+.menu-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 101;
 }
+
+.menu-mobile-toggle .barre {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--blanc);
+  transition: all 0.3s ease;
+}
+
+/* Animation hamburger */
+.menu-mobile-toggle.actif .barre:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-mobile-toggle.actif .barre:nth-child(2) {
+  opacity: 0;
+}
+.menu-mobile-toggle.actif .barre:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  
+  .admissions-grille,
+  .recherche-grille {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-grille {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .menu-mobile-toggle {
+    display: block;
+  }
+
+  .nav-principale .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 60px;
+  }
+
+  .nav-principale ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bleu-fonce);
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-principale ul.ouvert {
+    display: flex;
+  }
+
+  .nav-principale ul li {
+    width: 100%;
+  }
+
+  .nav-principale ul li a {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-principale ul li a.actif,
+  .nav-principale ul li a:hover {
+    border-bottom-color: var(--or);
+  }
+
+  #accueil .hero h2 { font-size: 2.2rem; }
+  #accueil .hero p { font-size: 1.1rem; }
+}
+
 @media (max-width: 600px) {
-  .header-inner { flex-direction: column; text-align: center; gap: 15px; }
+  .topbar .container {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
   .logo-uatm { width: 80px; }
   .header-texte h1 { font-size: 1.5rem; }
-  .header-texte p { font-size: 0.9rem; }
-  .footer-grille { grid-template-columns: 1fr; }
-  .nav-principale ul li a { padding: 12px 15px; font-size: 0.8rem; }
-  .section { padding: 48px 0; }
+  
   #accueil .hero { padding: 60px 0 50px; }
   #accueil .hero h2 { font-size: 1.8rem; }
-  #accueil .hero p { font-size: 1.05rem; }
+  
+  .section { padding: 48px 0; }
+  .section-titre h2 { font-size: 1.6rem; }
+
+  .chiffres-cles {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .chiffre-carte { padding: 20px 10px; }
+  .chiffre-carte .nombre { font-size: 2rem; }
+
+  .footer-grille {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-bas .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .chiffres-cles {
+    grid-template-columns: 1fr;
+  }
 }
