@@ -3,10 +3,10 @@
 
 /* Variables */
 :root {
-  --bleu-inst:     #003366; /* Bleu UATM */
+  --bleu-inst:     #003366; 
   --bleu-fonce:    #002147;
   --bleu-clair:    #0056b3;
-  --or:            #ffcc00; /* Or/Jaune UATM */
+  --or:            #ffcc00; 
   --or-clair:      #ffdd44;
   --blanc:         #ffffff;
   --gris-bg:       #f8f9fa;
@@ -24,7 +24,6 @@
   --rayon-carte:   6px;
 }
 
-/* Reset & Base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -34,7 +33,7 @@ body {
   color: var(--texte);
   background: var(--gris-bg);
   line-height: 1.7;
-  overflow-x: hidden; /* Prévient les débordements dus aux animations */
+  overflow-x: hidden; 
 }
 
 /*  Animations au défilement (Scroll Reveal) */
